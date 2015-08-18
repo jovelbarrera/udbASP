@@ -1,0 +1,25 @@
+﻿<%@ Master MasterPageFile="~/shared/Layout.master" Language="C#" AutoEventWireup="true" CodeFile="LateralBar.master.cs" Inherits="shared_LateralBar" %>
+
+<asp:Content ID="contentLayoutLateralBar" ContentPlaceHolderID="contentLayout" runat="Server">
+
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">Menú lateral
+                </a>
+            </li>
+            <li>
+                <a href="#">Subir Imagen</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <asp:ContentPlaceHolder ID="contentLayout" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+
+</asp:Content>

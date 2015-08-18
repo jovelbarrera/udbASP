@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Layout.master.cs" Inherits="Layout" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="<%= ResolveClientUrl("~/assets/css/bootstrap.min.css") %>" media="screen" />
+    <link rel="stylesheet" href="<%= ResolveClientUrl("~/assets/css/flatly.min.css") %>" />
+    <link rel="stylesheet" href="<%= ResolveClientUrl("~/assets/css/custom.css") %>" />
+    <link rel="stylesheet" href="<%= ResolveClientUrl("~/assets/css/lateralbar.css") %>" />
+    <%--<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>--%>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <title>.:: ASP ::.</title>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="<%= ResolveClientUrl("~/Default.aspx") %>" class="navbar-brand">Jovel Barrera</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu-guia1" aria-expanded="false">Guía 1 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="menu-guia1">
+                            <li><a href="<%= ResolveClientUrl("~/content/Calculadora.aspx") %>">Calculadora</a></li>
+                            <li><a href="<%= ResolveClientUrl("~/content/Notas.aspx") %>">Notas</a></li>
+                            <li><a href="<%= ResolveClientUrl("~/content/Registro.aspx") %>">Registro</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu-guia2" aria-expanded="false">Guía 2 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="menu-guia2">
+                            <li><a href="<%= ResolveClientUrl("~/content/SubirImagen.aspx") %>">Subir Imagen</a></li>
+                            <li><a href="<%= ResolveClientUrl("~/content/MenuLateral.aspx") %>">Menú Lateral</a></li>
+                            <li><a href="<%= ResolveClientUrl("~/content/Default.aspx") %>">-</a></li>
+                        </ul>
+                    </li>
+                    <%--<li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu-guia3" aria-expanded="false">Guía 3 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="menu-guia3">
+                            <li><a href="<%= ResolveClientUrl("~/content/Default.aspx") %>">-</a></li>
+                            <li><a href="<%= ResolveClientUrl("~/content/Default.aspx") %>">-</a></li>
+                            <li><a href="<%= ResolveClientUrl("~/content/Default.aspx") %>">-</a></li>
+                        </ul>
+                    </li>--%>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="mainLayout" style="top: 60px; position: relative;">
+        <asp:ContentPlaceHolder ID="contentLayout" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <script src="http://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="http://bootswatch.com/assets/js/bootswatch.js"></script>
+</body>
+</html>
